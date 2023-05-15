@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Pricingbody.css";
 import courses from "../Images/pointer1icon.png";
 import timer from "../Images/pointer2icon.png";
@@ -9,10 +9,20 @@ import one from "../Images/Icon1.png";
 import two from "../Images/Icon2.png";
 import IconClock from "../Images/IconClock2.png";
 import { GrRadialSelected } from 'react-icons/gr';
+import { BsCheckCircleFill } from 'react-icons/bs';
+import { MdRadioButtonChecked, MdRadioButtonUnchecked } from 'react-icons/md';
 
 
 function Pricingbody() {
-    return ( 
+    const [select, setSelect] = useState({
+        12: true,
+        6: false,
+        3: false,
+    })
+    const [value, setValue] = useState(179)
+    const [discount, setDiscount] = useState(18401)
+    const [total, setTotal] = useState(value + (18500 - discount));
+    return (
         <>
             <div className="pricing_section">
                 <div className="content_container">
@@ -68,7 +78,7 @@ function Pricingbody() {
 
                         <div className="month_card month_expired">
                             <div className="month_radio_div">
-                                <p className='offer-expired'>Offer expired</p>
+                                <p className='offer-expired'><span className="ex-rc-text">Offer expired</span></p>
                                 <p className="months_p">
                                     <GrRadialSelected size={15} className='select-icons' /> 12 Months Subscription
                                 </p>
@@ -80,13 +90,29 @@ function Pricingbody() {
                             </div>
                         </div>
 
-                        <div className="month_card month_recommended">
+                        <div className={`month_card month_recommended ${select[12] ? 'subscription2' : 'subscription'}`} onClick={() => {
+                            setSelect({
+                                12: true,
+                                6: false,
+                                3: false
+                            })
+                            setTotal(0)
+
+                            setValue(179);
+                            setDiscount(18401)
+                            setTotal(value + (18500 - discount))
+                        }}>
                             <div className="month_radio_div">
-                                <p className='offer-recommended'>Recommended</p>
+                                <p className='offer-recommended'><span className="ex-rc-text">Recommended</span></p>
                                 <p className="months_p">
-                                    <img className="tick-logo" alt="tick-radio-button" src="https://raw.githubusercontent.com/Meetawa/payment-page/9e21eaf50b5fda134ae3ac7601f686378de4cf83/src/assets/radio-button1.svg" />
-                                    12 Months Subscription
+
+                                    <div className={` ${select[12] ? 'checkFill' : 'checkEmpty'}`}>
+                                        {select[12] ? <BsCheckCircleFill /> : <MdRadioButtonUnchecked />}
+                                    </div>
+
+                                    <span className="recommend_text" >12 Months Subscription</span>
                                 </p>
+
                             </div>
 
                             <div className="pricing_div">
@@ -95,9 +121,26 @@ function Pricingbody() {
                             </div>
                         </div>
 
-                        <div className="month_card">
+                        <div className={`month_card ${select[6] ? 'subscription2' : 'subscription'}`} onClick={() => {
+                            setSelect({
+                                12: false,
+                                6: true,
+                                3: false
+                            })
+                            setTotal(0)
+
+                            setValue(149);
+                            setDiscount(18301)
+                            setTotal(value + (18500 - discount))
+
+
+                        }}>
                             <div className="month_radio_div months-input-part">
-                                <input type="radio" name="select" id="select" />
+
+                                <div className={`${select[6] ? 'checkFill' : 'checkEmpty'}`}>
+                                    {select[6] ? <BsCheckCircleFill /> : <MdRadioButtonUnchecked />}
+
+                                </div>
                                 <p className="months_p">6 Months Subscription</p>
                             </div>
 
@@ -107,9 +150,23 @@ function Pricingbody() {
                             </div>
                         </div>
 
-                        <div className="month_card">
+                        <div className={`month_card ${select[3] ? 'subscription2' : 'subscription'}`} onClick={() => {
+                            setSelect({
+                                12: false,
+                                6: false,
+                                3: true
+                            })
+                            setTotal(0)
+                            setValue(199);
+                            setDiscount(18201)
+                            setTotal(value + (18500 - discount))
+                        }}>
                             <div className="month_radio_div months-input-part">
-                                <input type="radio" name="select" id="select" />
+
+                                <div className={`${select[3] ? 'checkFill' : 'checkEmpty'}`}>
+                                    {select[3] ? <BsCheckCircleFill /> : <MdRadioButtonUnchecked />}
+
+                                </div>
                                 <p className="months_p">3 Months Subscription</p>
                             </div>
 
@@ -141,14 +198,14 @@ function Pricingbody() {
                             </div>
 
                             <div className="limited_time_price_side">
-                                <p className="limited_time_price"><span className="black">- ₹18,401</span></p>
+                                <p className="limited_time_price"><span className="black">- ₹{discount}</span></p>
                             </div>
 
                         </div>
 
                         <div className="total_fee_div">
                             <p className="total_fee"><span className="black">Total</span> (Incl. of 18% GST)</p>
-                            <p className="total_price"><span className="black">₹149</span></p>
+                            <p className="total_price"><span className="black">₹{total}</span></p>
                         </div>
                         <div className="btn-container">
                             <button className="cancel-btn">CANCEL</button>
