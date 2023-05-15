@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+	font-family: "Raleway";
+}
+body {
+	background: #f2f2f2;
+}
+.nav_section{
+	position: absolute;
+	width: 100vw;
+}
+nav {
+	background: #ffffff;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	height: 70px;
+	padding: 0 100px;
+	
+}
+nav .logo {
+	color: #fff;
+	font-size: 30px;
+	font-weight: 600;
+	letter-spacing: -1px;
+}
+nav .nav-items {
+	display: flex;
+	flex: 1;
+	padding: 0 0 0 30px;
+}
+nav .nav-items li {
+	list-style: none;
+	padding: 0 15px;
+}
+nav .nav-items li a {
+	color: #000000;
+	font-size: 18px;
+	font-weight: 500;
+	font-family: "Raleway";
+	text-decoration: none;
+}
+
+.fa-angle-down {
+	top: 2px;
+	left: -7px;
+	position: relative;
+	cursor: pointer;
+}
+@media (max-width: 1245px) {
+	nav {
+		padding: 0 50px;
+	}
+}
+@media (max-width: 1140px) {
+	nav {
+		padding: 0px;
+	}
+	nav .logo {
+		flex: 2;
+		text-align: center;
+	}
+	nav .nav-items {
+		position: fixed;
+		z-index: 99;
+		top: 70px;
+		width: 100%;
+		left: -100%;
+		height: 100%;
+		padding: 10px 50px 0 50px;
+		text-align: center;
+		display: inline-block;
+		transition: left 0.3s ease;
+	}
+	
+	nav .nav-items li {
+		line-height: 40px;
+		margin: 30px 0;
+	}
+	nav .nav-items li a {
+		font-size: 20px;
+	}
+}
+
+
+/* navbar right content styling */
+
+.nav__list {
+	display: flex;
+	align-items: center;
+}
+
+.fa-magnifying-glass {
+	position: relative;
+	left: -18px;
+	top: 1px;
+	cursor: pointer;
+}
+
+.nav__item + .nav__item {
+	margin-left: 1em;
+}
+
+.nav__link--button {
+	background: linear-gradient(266.79deg, #0048ff 4.63%, #0096ff 100%);
+	padding: 0.25em 1em;
+	border-radius: 10rem;
+	border: none;
+    font-size: 15px;
+	cursor: pointer;
+}
+
+.nav__link {
+	color: #000;
+	text-decoration: none;
+}
+
+.nav__link2 {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nav__list {
+	margin-right: 3%;
+	list-style: none;
+}

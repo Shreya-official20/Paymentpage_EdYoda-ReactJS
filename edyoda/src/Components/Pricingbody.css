@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+.pricing_section{
+    background-image: url(../Images/Background.png);
+    background-color: #172746;
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 120px;
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: space-between;
+    font-family: 'Raleway';
+}
+
+.content_container{
+    width: 65%;
+    height: 100%;
+    align-items: left;
+}
+
+
+.heading{
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+.content_line{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 30px;
+}
+
+.left_icons{    
+    height: 40px;
+    width: 40px;
+    margin-right: 50px;
+    
+}
+
+.left_lines{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.cross-line{
+    text-decoration-line: line-through;
+    text-decoration-color: red;
+}
+
+.blue{
+    color:#0096FF;
+}
+
+
+/* <<<========= Right side ===========>>> */
+
+.payment_plan_container{
+    width: 35%;
+}
+
+.payment_plan_card{
+    background-color: white;
+    height: 97%;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.signup_subscribe{
+    margin: 0 20%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.onetwo_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.onetwo_img{
+    height: 25px;
+    cursor: pointer;
+}
+
+.oneTwoP{
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.payment_title{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.month_card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2% 5%;
+    border: solid 2px #BEBEBE;
+    border-radius: 5px;
+    padding: 8px 5px;
+}
+
+.month_expired{
+    border: 2px solid #BEBEBE;
+    background: #E7E7E7;
+    color:rgb(117, 105, 105);
+}
+
+.month_recommended{
+    border: 2px solid rgba(71, 186, 104, 1);
+    background: #D7EDDD;
+}
+
+.offer-expired{
+    display: flex;
+    width: 88px;
+    height: 12px;
+    font-size: 8px;
+    font-weight: 700;
+    margin-top: -2px;
+    padding-bottom: 6px;
+    margin-left: 30px;
+    color: #ffffff;
+    background-color: #F77171;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  .offer-recommended{
+    display: flex;
+    width: 88px;
+    height: 12px;
+    font-size: 8px;
+    font-weight: 700;
+    margin-top: 0px;
+    padding-bottom: 6px;
+    margin-left: 30px;
+    color: #ffffff;
+    background-color: #47BA68;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  .black{
+    font-weight: bold;
+  }
+
+  .select-icons{
+    margin-left: 3px;
+    margin-right: 8px;
+    margin-top: 2px;
+    opacity: 0.4;
+
+  }
+
+  .tick-logo{
+    margin-right: 4px;
+    height: 20px;
+    width: 24px;
+  }
+
+.month_radio_div{
+    display: flex;
+    margin: -4%;
+    margin-top: -8%;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.months_p{
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-left: 10px;
+    align-items: center;
+    display: flex;
+}
+
+.total_price{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.total_month{
+    font-size: 0.6rem;
+    font-weight: 500;
+}
+
+.months-input-part{
+    flex-direction: row;
+    padding-left: 15px;
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+hr{
+    border: 1px solid #BEBEBE;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3% 5%; 
+}
+
+.subscription_fee_div{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 8% 3% 8%; 
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.limited_time_div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2% 5%;
+    border: solid 2px rgb(222,67,19);
+    background: rgb(222,67,19);
+    background: linear-gradient(135deg, rgba(222, 67, 19, 0.2) 0%, rgba(222, 67, 19, 0.2) 0.75%, rgba(222, 67, 19, 0.2) 2.92%, rgba(222, 68, 20, 0.2) 6.37%, rgba(223, 69, 21, 0.2) 10.97%, rgba(223, 72, 22, 0.2) 16.59%, rgba(224, 75, 24, 0.2) 23.1%, rgba(225, 80, 27, 0.2) 30.37%, rgba(227, 86, 31, 0.2) 38.27%, rgba(229, 94, 36, 0.2) 46.66%, rgba(231, 104, 43, 0.2) 55.41%, rgba(235, 117, 51, 0.2) 64.39%, rgba(238, 132, 60, 0.2) 73.47%, rgba(243, 149, 71, 0.2) 82.52%, rgba(248, 169, 84, 0.2) 91.41%, rgba(254, 193, 99, 0.2) 100%);
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.limited_time_text_side{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.limited_time_offer{
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #DE4313;
+}
+
+.limited_time_text_div2{
+    display: flex;
+    align-items: center;
+}
+
+.timer_img{
+    height: 20px;
+}
+
+.limited_time_date{
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin-left: 10px;
+    color: #DE4313;
+}
+
+.limited_time_price{
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+.total_fee_div{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 8% 3% 8%; 
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2% 5%;
+    gap: 20px;
+
+  }
+  .cancel-btn{
+    color:#F77171;
+    background-color: transparent;
+    border: 1px solid #F77171;
+    font-size: 10px;
+    font-weight:bold;
+    width: 50%;
+    height:40px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .pay-btn{
+    color:#ffffff;
+    background-color: #47BA68;
+    border: none;
+    font-size: 10px;
+    font-weight:bold;
+    width: 50%;
+    height:40px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .razorpay-logo{
+    cursor: pointer;
+    margin: 2% 5%;
+    width: 80px;
+    height:30px;
+    display: flex;
+  }
